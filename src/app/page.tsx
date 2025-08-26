@@ -56,6 +56,7 @@ function ExperienceItem({ start, end, role, company, bullets }: ExperienceItemPr
 }
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <div className="font-sans min-h-screen bg-background text-foreground">
       <Navbar />
@@ -79,7 +80,7 @@ export default function Home() {
           </div>
           <div className="justify-self-center md:justify-self-end">
             <div className="size-40 md:size-56 rounded-full border overflow-hidden">
-              <Image src="/2x2%20Cherokee.png" alt="Portrait of Cherokee Cordero" width={224} height={224} className="object-cover w-full h-full" />
+              <Image src={`${basePath}/2x2%20Cherokee.png`} alt="Portrait of Cherokee Cordero" width={224} height={224} className="object-cover w-full h-full" />
             </div>
           </div>
         </div>
